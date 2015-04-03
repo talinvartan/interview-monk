@@ -1,0 +1,46 @@
+body {
+    font: 300 1em 'Myriad Pro', 'Helvetica Neue', 'Segoe UI', 'Droid Sans', 'Helvetica';
+    padding: 1em;
+    margin: 0;
+}
+
+input, select, textarea, button {
+    font: 500 1em 'Myriad Pro', 'Helvetica Neue', 'Segoe UI', 'Droid Sans', 'Helvetica';
+    outline: none;
+    padding: 0.35em 0.5em 0.25em;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 0.35em 0.5em;
+}
+
+button, input[type="submit"] {
+    border-radius: 0.3em;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #777;
+    color: white;
+    transition: all 150ms ease;
+    cursor: pointer;
+}
+
+.view.ng-enter, .view.ng-leave {
+    transition: all 100ms ease;
+    opacity: 0;
+}
+
+.view.ng-enter {
+    opacity: 0;
+    transition-delay: 200ms;
+}
+
+.view.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+.view.ng-leave {
+    opacity: 1;
+}
+
+.view.ng-leave.ng-leave-active {
+    opacity: 0;
+}

@@ -1,0 +1,128 @@
+<style>
+
+    div.row {
+        margin: 0;
+    }
+
+    button.submit-test {
+        float: right;
+    }
+
+    div.create-test > .form-group {
+        display: inline-block;
+    }
+
+    div.col-divider {
+        padding: 1em;
+    }
+
+    section.create-test .form-control {
+        border: 1px solid #eee;
+        background-color: transparent;
+        border-radius: 0.1em;
+    }
+
+    div.type-of-question {
+        margin-bottom: 1em;
+        display: inline-block;
+    }
+
+    .col-divider > h3:first-child {
+        display: inline-block;
+        margin: 0;
+    }
+
+    div.create-test-caption {
+        color: #777;
+        display: inline-block;
+        margin-bottom: 0.2em;
+    }
+
+
+    div.question-list {
+        border-left: 1px solid #eee;
+        padding: 1em;
+    }
+
+
+</style>
+<section class="create-test">
+
+    <div class="row">
+        <div class="col-xs-12 col-md-6 col-lg-6">
+            <div class="col-divider">
+                <h3>Add / Edit / Create Test</h3>
+                <div class="create-test-caption">Create the test and select categories for the test and add them.</div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="title for the test" ng-model="title"/>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="tags ... " ng-model="tags"/>
+                </div>
+
+                <h3>Type in the googly</h3>
+
+                <div class="type-of-question btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> MCQ
+                    </label>
+                    <label class="btn btn-primary active">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Text
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Boolean
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="question" ng-model="new_question.question"/>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="answer" ng-model="new_question.answer"/>
+                </div>
+
+                <button type="button" class="btn btn-success" ng-click="addQuestion()">Add Question</button>
+
+            </div>
+
+
+
+
+        </div>
+
+        <div class="col-xs-12 col-md-6 col-lg-6">
+            <div class="question-list col-divider">
+                <h3>Your list of questions </h3>
+
+                <div style="overflow: auto; padding-bottom: 1em;">
+                    <div class="create-test-caption" style="float: left; clear: both;">Create the test and select categories for the test and add them.</div>
+                    <button type="button" class="btn btn-success submit-test" ng-click="submitTest()">Save Test</button>
+                </div>
+                <div ng-hide="questions.length" class="panel panel-success" style="clear: both;">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">Your question will show up here</div>
+                    <div class="panel-body">
+                        Answer ...
+                    </div>
+                </div>
+
+                <div ng-repeat="question in questions" class="panel panel-success">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">{{question.question}}</div>
+                    <div class="panel-body">
+                        {{question.answer}}
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+</section>

@@ -1,0 +1,30 @@
+<style>
+
+    span.label.label-primary {
+        margin-right: 0.5em;
+    }
+
+</style>
+<section class="browse-test">
+    <div style="padding: 1em">
+        <h3>Browse Tests</h3>
+        <div class="row">
+            <div class="col-lg-4" ng-repeat="test in tests">
+                <div ng-hide="questions.length" class="panel panel-success">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">{{test.title}}</div>
+                    <div class="panel-body">
+                        <div style="margin-bottom: 5px;">
+                            <span class="label label-primary" ng-repeat="tag in test.tags">{{tag}}</span>
+                        </div>
+                        <a href="#/tests/{{test._id}}">Take this test</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</section>

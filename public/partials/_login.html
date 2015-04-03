@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-6 col-lg-4 col-lg-offset-2">
+            <div class="form-group">
+                <h1 style="text-align: center;">Login</h1>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="username" ng-model="user.username"/>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="password" ng-model="user.password"/>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-success" ng-click="login()">Login</button>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-4">
+            <div class="form-group">
+                <h1 style="text-align: center;">Register</h1>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="username" ng-model="newuser.username"/>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="email" ng-model="newuser.email"/>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="password" ng-model="newuser.password"/>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="confirm password"/>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-success" ng-click="register()">Register</button>
+            </div>
+            <div class="alert alert-danger" ng-show="registration_error" role="alert">Nope, that didnt work! {{registration_error}}</div>
+            <div class="alert alert-success" ng-show="registration_success" role="alert">Thanks for signing up!</div>
+        </div>
+    </div>
+</div>
