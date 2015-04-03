@@ -1,4 +1,4 @@
-process.env.NODE_ENV = 'dev'; // use 'dev' or 'prod' to switch between environments
+process.env.NODE_ENV = 'prod'; // use 'dev' or 'prod' to switch between environments
 
 var express = require('express');
 var path = require('path');
