@@ -11,4 +11,5 @@ module.exports = function () {
             dburi: process.env.MONGOLAB_URI
         };
     }
+
 };
