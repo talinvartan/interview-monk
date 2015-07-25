@@ -1,84 +1,85 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head lang="en">
-  <meta charset="UTF-8">
-  <title></title>
-  <link rel="stylesheet" href="/css/base.css"/>
-  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
-  <script src="/jquery/dist/jquery.min.js"></script>
-  <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="/css/overrides.css"/>
-  <script src="/angular/angular.js"></script>
-  <script src="/angular-route/angular-route.js"></script>
-  <script src="/angular-animate/angular-animate.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/base.css"/>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap-confirmation.min.js"></script>
+    <link rel="stylesheet" href="/css/overrides.css"/>
+    <script src="/angular/angular.js"></script>
+    <script src="/angular-route/angular-route.js"></script>
+    <script src="/angular-animate/angular-animate.js"></script>
 
-  <script src="/js/Account/account_service.js"></script>
-  <script src="/js/Account/account_controllers.js"></script>
-  <script src="/js/Account/account.js"></script>
-  <script src="/js/Questions/questionapp.js"></script>
-  <script src="/js/Tests/tests.js"></script>
-
-  <script src="/js/myapp.js"></script>
+    <script src="/js/Account/account_service.js"></script>
+    <script src="/js/Account/account_controllers.js"></script>
+    <script src="/js/Account/account.js"></script>
+    <script src="/js/Questions/questionapp.js"></script>
+    <script src="/js/Tests/tests.js"></script>
+    <script src="/js/Test/test.js"></script>
+    <script src="/js/myapp.js"></script>
 </head>
 <body>
 
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">InterviewMonk</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#/browse">Browse Tests <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Take a Test</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#/tests/create">Create Test</a></li>
-            <li><a href="#">My Tests</a></li>
-            <li class="divider"></li>
-            <li><a href="#">View Percentile</a></li>
-            <li><a href="#">Stats</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">InterviewMonk</a>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#/login">Login</a></li>
-            <li><a href="#">Logout</a></li>
-            <li><a href="#">Register</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Settings</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#/browse">Browse Tests <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Take a Test</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#/tests/create">Create Test</a></li>
+                        <li><a href="#">My Tests</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">View Percentile</a></li>
+                        <li><a href="#">Stats</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#/login">Login</a></li>
+                        <li><a href="#">Logout</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Settings</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
 </nav>
 
 <section>
 
-  <div class="view" ng-view></div>
+    <div class="view" ng-view></div>
 
 </section>
 

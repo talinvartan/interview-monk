@@ -1,6 +1,6 @@
 angular
     .module('myApp', ['ngRoute', 'ngAnimate', 'account', 'createTest.questions', 'tests',
-        'ngAnimate'
+        'ngAnimate', 'test'
     ])
     .config(function($routeProvider) {
         $routeProvider.when('/login', {
@@ -14,12 +14,11 @@ angular
             controller: 'QuestionController'
         }).when('/tests/:id', {
             templateUrl: '/partials/_test.html',
-            controller: 'TestController'
+            controller: 'TestIndividualController'
         }).otherwise({
             redirectTo: '/login'
         });
     })
     .controller('LoginController', function () {
-    this.message = 'Hello World Message!';
-});
-
+        this.message = 'Hello World Message!';
+    });

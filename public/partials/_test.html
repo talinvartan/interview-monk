@@ -1,13 +1,64 @@
-<section>
-    <h3>Test Header</h3>
-    <div class="row">
-        <div class="col-lg-3">
-            <h3>List of Questions</h3>
-        </div>
-
-        <div class="col-lg-9">
-            <h3>Question</h3>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+<style>
+    button.submit-test {
+        float: right;
+    }
+    div.col-divider {
+        padding: 1em;
+    }
+    section.take-test {
+        border: 1px solid #eee;
+        background-color: transparent;
+        border-radius: 0.1em;
+    }
+    div.create-test-caption {
+        color: #777;
+        display: inline-block;
+        margin-bottom: 0.2em;
+    }
+    div.question-list {
+        overflow: scroll;
+        border-left: 1px solid #eee;
+        padding: 1em;
+    }
+    div.test-questions {
+        padding: 1em;
+    }
+    a {
+        color: #3C763D;
+    }
+</style>
+<script src="path/to/bootstrap-confirmation.js"></script>
+<section class="take-test">
+    <div class="col-xs-12 col-md-6 col-lg-6">
+        <div class="test-questions">
+            <h3>{{test.title}}:  List of Questions</h3>
+            <div style="overflow: auto; padding-bottom: 0.5em;" >
+                <div class="create-test-caption" style="float: left; clear: both;">Select each question and answer them on the right.</div>
+            </div>
+            <div  style="height: 55vh; overflow-y:scroll;">
+                <div ng-repeat="question in questions" class="panel panel-success" style="margin-bottom: 1em;">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading"  ng-click="getEachQuestion(question, $index)">{{$index+1}}) <a class="question-list" href="">{{question.question}}</a></div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="col-xs-12 col-md-6 col-lg-6">
+        <div class="question-list col-divider">
+            <h3>{{questions[index].question}}</h3>
+            <div style="overflow: auto; padding-bottom: 0.5em;" >
+                <div class="create-test-caption">Please enter the answer below:</div>
+            </div>
+            <div style="overflow: auto; padding-bottom: 1em;">
+                <button type="button" class="btn btn-success submit-test" data-toggle="confirmation"  ng-click="submitTest()">Submit Test</button>
+            </div>
+            <div>
+                <textarea name="" id="" class="form-control" rows="15" style="margin-bottom: 1em;" placeholder="answer..." ng-change="updateAnswer()"  ng-model="answer">{{answer}}</textarea>
+                <a class="btn btn-primary btnNext" ng-click="previous()"><< prev</a>
+                <a class="btn btn-primary btnPrevious" style="float: right;" ng-click="next()">next >></a>
+            </div>
+        </div>
+    </div>
+
 </section>

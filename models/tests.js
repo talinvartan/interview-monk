@@ -4,5 +4,6 @@ var mongoose = require('mongoose'),
 module.exports.TestModel = mongoose.model('Test', {
     title: String,
     questions: Mixed,
+    userAnswers: Mixed,
     user: Mixed
 });

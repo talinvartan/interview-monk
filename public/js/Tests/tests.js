@@ -21,5 +21,9 @@ angular.module('tests', []).service('Test', function ($http) {
         $scope.tests = data;
     });
 }).controller('TestController', function ($scope, Test, $routeParams) {
-    Test.getTest($routeParams.id);
+
+    Test.getTest($routeParams.id).success(function(data) {
+
+    });
+
 });
